@@ -1,0 +1,6 @@
+*.swp
+tags
+.vscode/
+.clang-format
+venv/
+external/

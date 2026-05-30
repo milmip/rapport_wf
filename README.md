@@ -1,0 +1,2 @@
+# Paper template for EPFL
+

@@ -4,3 +4,4 @@ tags
 .clang-format
 venv/
 external/
+__pycache__/

@@ -9,7 +9,10 @@ import numpy as np
 fig, main = get_material(script_name(__file__))
 ax0 = fig.add_subplot(main)
 
-######
+#############################################
+#########   Edit the mpl fig here   #########
+#############################################
+
 x = np.linspace(-1, 1, 50)
 y = x**2
 
@@ -91,7 +94,9 @@ y = x**2
 #fig.legend() # regroup for all plots
 #
 ax0.plot(x,y, label="parabola")
-######
+#############################################
+#############################################
+#############################################
 
 parser = argparse.ArgumentParser(description='Options must be entered.')
 parser.add_argument("-d", type=int, help="0 for screen display, 1 for saving")

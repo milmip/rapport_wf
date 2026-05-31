@@ -1,28 +1,28 @@
-from config import EPFL_LOGO
+from config import *
 
 from mpl_template import Template
 import matplotlib.pyplot as plt
 
 FIG_SIZE = (8.5, 11) # inches
 TBK = [
-    {
-        "name": "title",
-        "text": [
-            {
-                "s": "Ventes Mensuelles 2024",
-                "weight": "bold",
-                "x": 0.5, "y": 0.54,
-                "va": "baseline", "ha": "center",
-            },
-            {
-                "s": "Rapport Exemple — mpl-template",
-                "weight": "light",
-                "x": 0.5, "y": 0.46,
-                "va": "top", "ha": "center",
-                "color": (0.4, 0.4, 0.4),
-            },
-        ],
-    }, 
+        #{
+        #    "name": "title",
+        #    "text": [
+        #        {
+        #            "s": "Ventes Mensuelles 2024",
+        #            "weight": "bold",
+        #            "x": 0.5, "y": 0.54,
+        #            "va": "baseline", "ha": "center",
+        #        },
+        #        {
+        #            "s": "Rapport Exemple — mpl-template",
+        #            "weight": "light",
+        #            "x": 0.5, "y": 0.46,
+        #            "va": "top", "ha": "center",
+        #            "color": (0.4, 0.4, 0.4),
+        #        },
+        #    ],
+        #}, 
     {
         "name": "logo",
         "image": {
@@ -32,15 +32,15 @@ TBK = [
     },
     {
         "name": "project",
-        "text": {"s": "Projet Demo", "x": 0.5, "y": 0.5, "va": "center", "ha": "center"},
+        "text": {"s": TP_TITLE, "x": 0.5, "y": 0.5, "va": "center", "ha": "center"},
     },
     {
         "name": "date",
-        "text": {"s": "Mai 2026", "x": 0.5, "y": 0.5, "va": "center", "ha": "center"},
+        "text": {"s": DATE, "x": 0.5, "y": 0.5, "va": "center", "ha": "center"},
     },
     {
-        "name": "fignum",
-        "text": {"s": "Figure\n01", "weight": "bold", "x": 0.5, "y": 0.5, "va": "center", "ha": "center"},
+        "name": "group",
+        "text": {"s": GROUP, "weight": "bold", "x": 0.5, "y": 0.5, "va": "center", "ha": "center"},
     },
 ]
 

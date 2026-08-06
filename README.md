@@ -22,6 +22,14 @@ To create a plot with `matplotlib`, go to the root project directory and :
 2. Edit
 3. Run `python3.11 figures/exemple.py -d 0`
 4. Go step 2 if you're not happy
-5. Save youre figure, run `make generate_figures` (`make clean_figures` to delete all)
+5. Save youre figure, run `make figures` (`make clean_figures` to delete all)
 
+### Dealing with latex preview
 
+If you've got `localleaf`, just run :
+```
+localleaf -m latex/master.tex ./ -- --outdir=build/ --auxdir=aux/
+```
+
+then launch your favourite pdf viewer (zathura) on `build/master.pdf`. It will be 
+automatically be refresh.

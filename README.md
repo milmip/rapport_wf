@@ -14,6 +14,7 @@ make mpl-template
 source venv/bin/activate
 make build_mpt-env
 ```
+Then modify the `.git/config` file, renaming the remote url. Create the project on GitHub : it's ready to push.
 
 ### Create a *mpl figure*
 

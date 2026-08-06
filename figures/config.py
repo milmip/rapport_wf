@@ -11,5 +11,5 @@ DATE = "Mai 2026"
 ### You normally don't have to touch this
 EXPORT_PATH = Path('img/')
 EXPORT_FORMAT = 'png'
-EPFL_LOGO = ROOT/'logo/EPFL_logo.png'
+EPFL_LOGO = ROOT/EXPORT_PATH/'logo/EPFL_logo.png'
 ###

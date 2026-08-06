@@ -7,7 +7,8 @@ IMG_FILES = $(PY_FILES:$(FIG_DIR)/%.py=$(IMG_DIR)/%.$(EXTENTION))
 
 clean_figures:
 	rm -f $(IMG_FILES)
-generate_figures: $(IMG_FILES)
+	
+figures: $(IMG_FILES)
 
 $(IMG_DIR)/%.$(EXTENTION): $(FIG_DIR)/%.py
 	@echo $@ $<

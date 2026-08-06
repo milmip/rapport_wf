@@ -18,17 +18,13 @@ make build_mpt-env
 ### Create a *mpl figure*
 
 To create a plot with `matplotlib`, go to the root project directory and : 
-1. Run `cp figures/exemple.py figures/FigureXX.py`
-2. Edit
-3. Run `python3.11 figures/exemple.py -d 0`
-4. Go step 2 if you're not happy
-5. S    
-    
-    
-    
-    
-    
-ave youre figure, run `make figures` (`make clean_figures` to delete all)
+
+1. Ensure you've `source venv/bin/activate`.
+2. Run `cp figures/exemple.py figures/FigureXX.py`.
+3. Edit.
+4. Run `python3.11 figures/exemple.py -d 0`.
+5. Go step 3 if you're not happy.
+6. Save your figure, run `make figures` (`make clean_figures` to delete all).
 
 ### Dealing with latex preview
 

@@ -1,0 +1,562 @@
+% Some basic packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[french]{babel}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{enumerate}
+
+\pdfminorversion=7
+
+% Don't indent paragraphs, leave some space between them
+\usepackage{parskip}
+
+% Hide page number when page is empty
+\usepackage{emptypage}
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage{xcolor}
+
+% Other font I sometimes use.
+% \usepackage{cmbright}
+
+% Math stuff
+\usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
+% Fancy script capitals
+\usepackage{mathrsfs}
+\usepackage{cancel}
+% Bold math
+\usepackage{bm}
+% Some shortcuts
+\newcommand\A{\ensuremath{\mathbb{A}}}
+\newcommand\B{\ensuremath{\mathbb{B}}}
+\newcommand\C{\ensuremath{\mathbb{C}}}
+\newcommand\D{\ensuremath{\mathbb{D}}}
+\newcommand\E{\ensuremath{\mathbb{E}}}
+\newcommand\F{\ensuremath{\mathbb{F}}}
+\newcommand\G{\ensuremath{\mathbb{G}}}
+\newcommand\H{\ensuremath{\mathbb{H}}}
+\newcommand\I{\ensuremath{\mathbb{I}}}
+\newcommand\J{\ensuremath{\mathbb{J}}}
+\newcommand\K{\ensuremath{\mathbb{K}}}
+\newcommand\L{\ensuremath{\mathbb{L}}}
+\newcommand\M{\ensuremath{\mathbb{M}}}
+\newcommand\N{\ensuremath{\mathbb{N}}}
+\newcommand\O{\ensuremath{\mathbb{O}}}
+\newcommand\P{\ensuremath{\mathbb{P}}}
+\newcommand\Q{\ensuremath{\mathbb{Q}}}
+\newcommand\R{\ensuremath{\mathbb{R}}}
+\newcommand\S{\ensuremath{\mathbb{S}}}
+\newcommand\T{\ensuremath{\mathbb{T}}}
+\newcommand\U{\ensuremath{\mathbb{U}}}
+\newcommand\V{\ensuremath{\mathbb{V}}}
+\newcommand\W{\ensuremath{\mathbb{W}}}
+\newcommand\X{\ensuremath{\mathbb{X}}}
+\newcommand\Y{\ensuremath{\mathbb{Y}}}
+\newcommand\Z{\ensuremath{\mathbb{Z}}}
+
+\newcommand\aA{\ensuremath{\mathcal{A}}}
+\newcommand\bB{\ensuremath{\mathcal{B}}}
+\newcommand\cC{\ensuremath{\mathcal{C}}}
+\newcommand\dD{\ensuremath{\mathcal{D}}}
+\newcommand\eE{\ensuremath{\mathcal{E}}}
+\newcommand\fF{\ensuremath{\mathcal{F}}}
+\newcommand\gG{\ensuremath{\mathcal{G}}}
+\newcommand\hH{\ensuremath{\mathcal{H}}}
+\newcommand\iI{\ensuremath{\mathcal{I}}}
+\newcommand\jJ{\ensuremath{\mathcal{J}}}
+\newcommand\kK{\ensuremath{\mathcal{K}}}
+\newcommand\lL{\ensuremath{\mathcal{L}}}
+\newcommand\mM{\ensuremath{\mathcal{M}}}
+\newcommand\nN{\ensuremath{\mathcal{N}}}
+\newcommand\oO{\ensuremath{\mathcal{O}}}
+\newcommand\pP{\ensuremath{\mathcal{P}}}
+\newcommand\qQ{\ensuremath{\mathcal{Q}}}
+\newcommand\rR{\ensuremath{\mathcal{R}}}
+\newcommand\sS{\ensuremath{\mathcal{S}}}
+\newcommand\tT{\ensuremath{\mathcal{T}}}
+\newcommand\uU{\ensuremath{\mathcal{U}}}
+\newcommand\vV{\ensuremath{\mathcal{V}}}
+\newcommand\wW{\ensuremath{\mathcal{W}}}
+\newcommand\xX{\ensuremath{\mathcal{X}}}
+\newcommand\yY{\ensuremath{\mathcal{Y}}}
+\newcommand\zZ{\ensuremath{\mathcal{Z}}}
+
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\rang}{\operatorname{rang}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\Bil}{\operatorname{Bil}}
+\newcommand{\Bij}{\operatorname{Bij}}
+\newcommand{\DET}{\operatorname{det}}
+\newcommand{\min}{\operatorname{min}}
+\newcommand{\max}{\operatorname{max}}
+\newcommand{\sup}{\operatorname{sup}}
+\newcommand{\TR}{\operatorname{Tr}}
+\newcommand{\inf}{\operatorname{inf}}
+\newcommand{\cof}{\operatorname{Cof}}
+\renewcommand{\span}{\operatorname{Vect}}
+\renewcommand{\inte}{\operatorname{int}}
+\newcommand{\const}{\textsc{const}}
+
+\renewcommand{\d}{\text{d}}
+\let\p\partial
+
+
+% Easily typeset systems of equations (French package)
+\usepackage{systeme}
+
+% Put x \to \infty below \lim
+\let\svlim\lim\def\lim{\svlim\limits}
+% Idem for the sum
+\let\svsum\sum\def\sum{\svsum\limits}
+% Idem for the min
+\let\svmin\min\def\min{\svmin\limits}
+% Idem for the max
+\let\svmax\max\def\max{\svmax\limits}
+% And the integral
+\let\svint\int\def\int{\svint\limits}
+% And the fractions
+\let\svfrac\frac\def\frac#1#2{{\displaystyle\svfrac{#1}{#2}}}
+
+
+%Make implies and impliedby shorter
+\let\implies\Longrightarrow
+\let\impliedby\Longleftarrow
+\let\iff\Longleftrightarrow
+\let\bf\boldsymbol
+\let\l\left
+\let\r\right
+
+% Add \contra symbol to denote contradiction
+\usepackage{stmaryrd} % for \lightning
+\newcommand\contra{\scalebox{1.5}{$\lightning$}}
+
+\let\phi\varphi
+\let\epsilon\varepsilon
+
+% Command for short corrections
+% Usage: 1+1=\correct{3}{2}
+
+\definecolor{correct}{HTML}{009900}
+\newcommand\correct[2]{\ensuremath{\:}{\color{red}{#1}}\ensuremath{\to }{\color{correct}{#2}}\ensuremath{\:}}
+\newcommand\green[1]{{\color{correct}{#1}}}
+
+% horizontal rule
+\newcommand\hr{
+    \noindent\rule[0.5ex]{\linewidth}{0.5pt}
+}
+
+% hide parts
+\newcommand\hide[1]{}
+
+% si unitx
+\usepackage{siunitx}
+\sisetup{locale = FR}
+
+% Environments
+\makeatother
+% For box around Definition, Theorem, \ldots
+\usepackage{mdframed}
+\mdfsetup{skipabove=1em,skipbelow=0em}
+\theoremstyle{definition}
+%\newmdtheoremenv[nobreak=true]{definition}{Définition}
+%\newmdtheoremenv[nobreak=true]{propriete}{Propriété}
+%\newmdtheoremenv[nobreak=true]{corollaire}{Corollaire}
+%\newmdtheoremenv[nobreak=true]{lemme}{Lemme}
+%\newmdtheoremenv[nobreak=true]{proposition}{Proposition}
+%\newmdtheoremenv[nobreak=true]{theoreme}{Théorème}
+%\newmdtheoremenv[nobreak=true]{loi}{Loi}
+%\newmdtheoremenv[nobreak=true]{postulat}{Postulat}
+\newmdtheoremenv{conclusion}{Conclusion}
+\newmdtheoremenv{bonus}{Supplément}
+\newmdtheoremenv{conjecture}{Conjecture}
+
+\newtheorem*{rappel}{Rappel}
+%\newtheorem*{preuve}{Preuve}
+\newtheorem*{notation}{Notation}
+\newtheorem*{observation}{Observation}
+\newtheorem*{reflexion}{Réflexion}
+\newtheorem*{exercice}{Exercice}
+\newtheorem*{remarque}{Remarque}
+\newtheorem*{pratique}{En pratique}
+\newtheorem*{probleme}{Problème}
+\newtheorem*{terminologie}{Terminologie}
+\newtheorem*{application}{Application}
+\newtheorem*{exemple}{Exemple}
+\newtheorem*{question}{Question}
+\newtheorem*{zoologie}{Zoologie}
+\newtheorem*{idee}{Idée}
+
+% Personal environement
+\newtheoremstyle{bleuPreuve}     % nom du style
+  {}{}                           % espace avant/après
+  {\color{blue!60!black}}        % corps du texte : légèrement bleuté
+  {}                             % indentation
+  {\itshape\color{blue!70!black}}% tête du théorème ("Preuve") : italique et bleutée
+  {.}                            % ponctuation après le titre
+  { }                            % espace après le titre
+  {}                             % définition du titre
+
+\theoremstyle{bleuPreuve}
+\newtheorem*{preuve}{Preuve}
+
+\newtheoremstyle{vertRetour}     % nom du style
+  {}{}                           % espace avant/après
+  {\color{green!40!black}}        % corps du texte : légèrement bleuté
+  {}                             % indentation
+  {\itshape\color{black}}% tête du théorème ("Preuve") : italique et bleutée
+  {\\}                            % ponctuation après le titre
+  { }                            % espace après le titre
+  {}                             % définition du titre
+
+\theoremstyle{vertRetour}
+\newtheorem*{retour}{}
+
+% End example and intermezzo environments with a small diamond (just like proof
+% environments end with a small square)
+\usepackage{etoolbox}
+\AtEndEnvironment{preuve}{\null\hfill$\square$}%
+%\AtEndEnvironment{intermezzo}{\null\hfill$\square$}%
+% \AtEndEnvironment{opmerking}{\null\hfill$\diamond$}%
+
+% Fix some spacing
+% http://tex.stackexchange.com/questions/22119/how-can-i-change-the-spacing-before-theorems-with-amsthm
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=\parskip \thm@postskip=0pt
+}
+
+
+% Exercise 
+% Usage:
+% \oefening{5}
+% \suboefening{1}
+% \suboefening{2}
+% \suboefening{3}
+% gives
+% Oefening 5
+%   Oefening 5.1
+%   Oefening 5.2
+%   Oefening 5.3
+\newcommand{\oefening}[1]{%
+    \def\@oefening{#1}%
+    \subsection*{Oefening #1}
+}
+
+\newcommand{\suboefening}[1]{%
+    \subsubsection*{Oefening \@oefening.#1}
+}
+
+
+% \lecture starts a new lecture (les in dutch)
+%
+% Usage:
+% \lecture{1}{di 12 feb 2019 16:00}{Inleiding}
+%
+% This adds a section heading with the number / title of the lecture and a
+% margin paragraph with the date.
+
+% I use \dateparts here to hide the year (2019). This way, I can easily parse
+% the date of each lecture unambiguously while still having a human-friendly
+% short format printed to the pdf.
+
+\usepackage{xifthen}
+\def\testdateparts#1{\dateparts#1\relax}
+\def\dateparts#1 #2 #3 #4 #5\relax{
+    \marginpar{\small\textsf{\mbox{#1 #2 #3 #5}}}
+}
+
+\def\@lecture{}%
+\newcommand{\lecture}[3]{
+    \ifthenelse{\isempty{#3}}{%
+        \def\@lecture{Session #1}%
+    }{%
+        \def\@lecture{Session #1: #3}%
+    }%
+    \subsection*{\@lecture}
+    \marginpar{\small\textsf{\mbox{#2}}}
+}
+
+
+
+% These are the fancy headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% LE: left even
+% RO: right odd
+% CE, CO: center even, center odd
+% My name for when I print my lecture notes to use for an open book exam.
+% \fancyhead[LE,RO]{Gilles Castel}
+
+\fancyhead[RO,LE]{\@lecture} % Right odd,  Left even
+\fancyhead[RE,LO]{}          % Right even, Left odd
+
+\fancyfoot[RO,LE]{\thepage}  % Right odd,  Left even
+\fancyfoot[RE,LO]{}          % Right even, Left odd
+\fancyfoot[C]{\leftmark}     % Center
+
+\makeatother
+
+
+
+
+% Todonotes and inline notes in fancy boxes
+\usepackage{todonotes}
+\usepackage[most]{tcolorbox}
+
+% Make boxes breakable
+\tcbuselibrary{skins, breakable}
+
+% Verbetering is correction in Dutch
+% Usage: 
+% \begin{verbetering}
+%     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+%     tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+%     vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+%     no sea takimata sanctus est Lorem ipsum dolor sit amet.
+% \end{verbetering}
+
+% === Style général ===
+\tcbset{
+  definitionstyle/.style={
+    enhanced,
+    colback=white, 
+    breakable, 
+    colframe=green!60!black,
+    colbacktitle=green!60!black, 
+    coltitle=white,
+    fonttitle=\bfseries\sffamily,
+    boxrule=0.8pt, 
+    arc=0mm,
+    before skip=1em, 
+    after skip=1em,
+    title=#1
+  },
+  theoremstyle/.style={
+    enhanced,
+    colback=white, 
+    breakable, 
+    colframe=blue!75!black,
+    colbacktitle=blue!75!black, 
+    coltitle=white,
+    fonttitle=\bfseries\sffamily,
+    boxrule=0.8pt, 
+    arc=0mm,
+    before skip=1em, 
+    after skip=1em,
+    title=Théorème~#1
+  },
+  lemmestyle/.style={
+    enhanced,
+    colback=white, 
+    breakable, 
+    colframe=blue!50!black,
+    colbacktitle=blue!50!black, 
+    coltitle=white,
+    fonttitle=\bfseries\sffamily,
+    boxrule=0.8pt, 
+    arc=0mm,
+    before skip=1em, 
+    after skip=1em,
+    title=Lemme~#1
+  },
+  corollairestyle/.style={
+    enhanced,
+    colback=white, 
+    breakable, 
+    colframe=blue!100!black,
+    colbacktitle=blue!100!black, 
+    coltitle=white,
+    fonttitle=\bfseries\sffamily,
+    boxrule=0.8pt, 
+    arc=0mm,
+    before skip=1em, 
+    after skip=1em,
+    title=Corollaire~#1
+  },
+  propositionstyle/.style={
+    enhanced,
+    colback=white,
+    breakable, 
+    colframe=blue!70!red,
+    colbacktitle=blue!70!red, 
+    coltitle=white,
+    fonttitle=\bfseries\sffamily,
+    boxrule=0.8pt, 
+    arc=0mm,
+    before skip=1em, 
+    after skip=1em,
+    title=Proposition~#1
+  },
+  proprietestyle/.style={
+    enhanced,
+    colback=white, 
+    breakable, 
+    colframe=blue!60!red,
+    colbacktitle=blue!60!red, 
+    coltitle=white,
+    fonttitle=\bfseries\sffamily,
+    boxrule=0.8pt, 
+    arc=0mm,
+    before skip=1em, 
+    after skip=1em,
+    title=Propriété~#1
+  },
+  loistyle/.style={
+    enhanced,
+    colback=white, 
+    breakable, 
+    colframe=yellow!60!red,
+    colbacktitle=yellow!60!red, 
+    coltitle=white,
+    fonttitle=\bfseries\sffamily,
+    boxrule=0.8pt, 
+    arc=0mm,
+    before skip=1em, 
+    after skip=1em,
+    title=Loi~#1
+  },
+  postulatstyle/.style={
+    enhanced,
+    colback=white, 
+    breakable, 
+    colframe=yellow!80!red,
+    colbacktitle=yellow!80!red, 
+    coltitle=white,
+    fonttitle=\bfseries\sffamily,
+    boxrule=0.8pt, 
+    arc=0mm,
+    before skip=1em, 
+    after skip=1em,
+    title=Postulat~#1
+  }
+}
+
+
+% === Environnement principal ===
+\newenvironment{definition}[1][]
+{\begin{tcolorbox}[definitionstyle={#1}]}
+{\end{tcolorbox}}
+
+\newenvironment{theoreme}[1][]
+{\begin{tcolorbox}[theoremstyle={#1}]}
+{\end{tcolorbox}}
+
+\newenvironment{lemme}[1][]
+{\begin{tcolorbox}[lemmestyle={#1}]}
+{\end{tcolorbox}}
+
+\newenvironment{corollaire}[1][]
+{\begin{tcolorbox}[corollairestyle={#1}]}
+{\end{tcolorbox}}
+
+\newenvironment{proposition}[1][]
+{\begin{tcolorbox}[propositionstyle={#1}]}
+{\end{tcolorbox}}
+
+\newenvironment{propriete}[1][]
+{\begin{tcolorbox}[proprietestyle={#1}]}
+{\end{tcolorbox}}
+
+\newenvironment{loi}[1][]
+{\begin{tcolorbox}[loistyle={#1}]}
+{\end{tcolorbox}}
+
+\newenvironment{postulat}[1][]
+{\begin{tcolorbox}[postulatstyle={#1}]}
+{\end{tcolorbox}}
+
+% === Sous-environnement : Contexte Hypothèse main ===
+\newenvironment{contexte}
+{
+  \par\vspace{0.5em}\noindent\textit{Soit:} \par\vspace{0.3em}
+  \begin{tcolorbox}[
+    enhanced, 
+    colback=black!5, 
+    colframe=black!5,
+    boxrule=0.4pt, 
+    arc=0.5mm, 
+    left=1mm, 
+    right=1mm,
+    before skip=2pt, 
+    after skip=4pt, 
+    sharp corners,
+    breakable]
+}
+{
+  \end{tcolorbox}
+}
+
+\newenvironment{hypothese}
+{
+  \par\vspace{0.5em}\noindent\textit{Supposons:} \par\vspace{0.3em}
+  \begin{tcolorbox}[
+    enhanced, 
+    colback=black!5, 
+    colframe=black!5,
+    boxrule=0.4pt, 
+    arc=0.5mm, 
+    left=1mm, 
+    right=1mm,
+    before skip=2pt, 
+    after skip=4pt, 
+    sharp corners,
+    breakable]
+}
+{
+  \end{tcolorbox}
+}
+
+\newenvironment{main}
+{\par\vspace{0.5em}}
+{\par\vspace{0.5em}}
+
+\newenvironment{donnee}
+{\itshape}
+{}
+
+\newenvironment{meta}{
+  \par\vspace{0.5em}
+  \begin{tcolorbox}[
+    enhanced,
+    colback=white!95!black,             % fond blanc
+    colframe=gray!70,          % couleur de la bordure (barre)
+    left=8mm, 
+    colframe=white,                  % espace entre la barre et le texte
+    right=0mm, top=0mm, bottom=0mm,
+    boxrule=0.8pt,             % épaisseur de la barre
+    borderline west={2pt}{0pt}{gray!70}, % barre verticale à gauche
+    sharp corners,              % coins non arrondis
+    boxsep=0pt,
+    before skip=6pt, after skip=6pt,
+    halign=center              % texte centré
+  ]
+  \itshape \vspace{0.5em}                    % texte en italique
+}{
+  \vspace{0.5em} \end{tcolorbox}\par\vspace{0.5em}
+}
+
+% sigure support as explained in my blog post.
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+% Fix some stuff
+% %http://tex.stackexchange.com/questions/76273/multiple-pdfs-with-page-group-included-in-a-single-page-warning
+\pdfsuppresswarningpagegroup=1
+
+
+% My name
+\author{Emiliem Progin}

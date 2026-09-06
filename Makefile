@@ -2,17 +2,17 @@
 EXTENTION = png
 IMG_DIR = img
 FIG_DIR = figures
-PY_FILES = $(shell find $(FIG_DIR) -type f -name "Figure*") 
+PY_FILES = $(shell find $(FIG_DIR) -type f -name "Figure*")
 IMG_FILES = $(PY_FILES:$(FIG_DIR)/%.py=$(IMG_DIR)/%.$(EXTENTION))
 
 clean_figures:
 	rm -f $(IMG_FILES)
-	
+
 figures: $(IMG_FILES)
 
 $(IMG_DIR)/%.$(EXTENTION): $(FIG_DIR)/%.py
 	@echo $@ $<
-	python3.11 $< -d 1
+	python3 $< -d 1
 
 clean_all: clean_mpl-template clean_venv
 
@@ -28,7 +28,7 @@ clean_mpl-template:
 	rm -rf external/mpl-template
 
 venv:
-	python3.11 -m venv venv
+	python3 -m venv venv
 clean_venv:
 	rm -rf venv
 

@@ -13,7 +13,6 @@ ax0 = fig.add_subplot(main)
 #########   Edit the mpl fig here   #########
 #############################################
 
-
 x = np.linspace(-1, 1, 50)
 y = x**2
 

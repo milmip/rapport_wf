@@ -10,6 +10,13 @@ clean_figures:
 	
 figures: $(IMG_FILES)
 
+new-fig:
+	@next=$$(ls figures/Figure[0-9][0-9].py 2>/dev/null | grep -oE '[0-9]+' | sort -n | tail -1); \
+	next=$$(echo $${next:-0} | sed 's/^0*//'); \
+	next=$$(printf "%02d" $$((next + 1))); \
+	cp figures/exemple.py "figures/Figure$${next}.py"; \
+	echo "Créé : figures/Figure$${next}.py"
+
 $(IMG_DIR)/%.$(EXTENTION): $(FIG_DIR)/%.py
 	@echo $@ $<
 	python3.11 $< -d 1

@@ -25,7 +25,7 @@ Then modify the `.git/config` file, renaming the remote url. Create the project 
 To create a plot with `matplotlib`, go to the root project directory and : 
 
 1. Ensure you've `source venv/bin/activate`.
-2. Run `cp figures/exemple.py figures/FigureXX.py`.
+2. Run `make new-fig`.
 3. Edit.
 4. Run `python3.11 figures/exemple.py -d 0`.
 5. Go step 3 if you're not happy.

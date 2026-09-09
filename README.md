@@ -16,6 +16,7 @@ make build_mpt-env
 mv README.md WORKFLOW.md
 touch README.md
 echo "# J'aimes les baies" > README.md
+pip install pandas
 ```
 Then modify the `.git/config` file, renaming the remote url. Create the project on GitHub : it's ready to push.
 

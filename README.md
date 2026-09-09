@@ -31,6 +31,16 @@ To create a plot with `matplotlib`, go to the root project directory and :
 5. Go step 3 if you're not happy.
 6. Save your figure, run `make figures` (`make clean_figures` to delete all).
 
+### Taking measurements and keep a eye on stats
+
+You've `Libre-Office Calc` opened on `data/mesure.csv`. Then :
+
+1. Ensure you've `source venv/bin/activate`.
+2. Run `python3.11` then `import pandas as pd`.
+3. Edit on `Libre-Office`.
+4. Run `>>> tab = pd.read_csv("data/mesures.csv")`, `>>> tab.describe()`.
+5. Go step 3.
+
 ### Dealing with latex preview
 
 If you've got `localleaf`, just run :

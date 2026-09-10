@@ -1,7 +1,6 @@
 from config import *
 from utils.utils import script_name, figure_path
 from frame import get_material
-import argparse
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -105,11 +104,4 @@ ax0.plot(x,y, label="parabola")
 #############################################
 #############################################
 
-parser = argparse.ArgumentParser(description='Options must be entered.')
-parser.add_argument("-d", type=int, help="0 for screen display, 1 for saving")
-args = parser.parse_args()
-
-if args.d:
-    fig.savefig(figure_path(__file__), dpi=150, bbox_inches=None)
-else:
-    plt.show()
+fig.savefig(figure_path(__file__), dpi=150, format=EXPORT_FORMAT, bbox_inches=None)

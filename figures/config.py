@@ -3,9 +3,9 @@ from pathlib import Path
 ### Please adapte this for youreself
 ROOT = Path('~/code/rapport_wf/').expanduser()
 GENERAL = "TP S-PH"
-TP_TITLE = "TP XX électromag"
-GROUP = "GXX"
-DATE = "Mai 2026"
+TP_TITLE = "TP 01"
+GROUP = "G_03"
+DATE = "Sept. 2026"
 ###
 
 ### You normally don't have to touch this

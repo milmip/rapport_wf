@@ -1,12 +1,19 @@
 from config import *
 from utils.utils import script_name, figure_path
-from frame.full import get_material
+from frame import get_material
 import argparse
 
 import matplotlib.pyplot as plt
 import numpy as np
 
-fig, main = get_material(script_name(__file__))
+#############################################
+#########   Figure config           #########
+#############################################
+temp_id = 0 # 0 half, 1 full
+draft=True
+#############################################
+
+fig, main = get_material(script_name(__file__), temp_id, draft)
 ax0 = fig.add_subplot(main)
 
 #############################################

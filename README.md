@@ -9,6 +9,9 @@ Run the following :
 ```
 git clone https://github.com/milmip/rapport_wf.git
 cd rapport_wf
+```
+then edit `Makefile` config (at the top of the file). Then
+```
 make venv
 make mpl-template
 source venv/bin/activate
@@ -27,9 +30,12 @@ To create a plot with `matplotlib`, go to the root project directory and :
 1. Ensure you've `source venv/bin/activate`.
 2. Run `make new-fig`.
 3. Edit.
-4. Run `python3.11 figures/exemple.py -d 0`.
+4. Run `make FigureXX`.
 5. Go step 3 if you're not happy.
-6. Save your figure, run `make figures` (`make clean_figures` to delete all).
+
+Usefull tips : 
+- `make figures` to compile all the Figures.
+- `make clean_figures` to delete all the compiled figures.
 
 ### Taking measurements and keep a eye on stats
 

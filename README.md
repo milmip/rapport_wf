@@ -23,6 +23,8 @@ pip install pandas
 ```
 Then modify the `.git/config` file, renaming the remote url. Create the project on GitHub : it's ready to push.
 
+Don't forget to modify `figures/config.py` as well.
+
 ### Create a *mpl figure*
 
 To create a plot with `matplotlib`, go to the root project directory and : 

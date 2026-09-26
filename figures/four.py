@@ -16,8 +16,8 @@ plt.rcParams.update(
 #########   Figure config           #########
 #############################################
 
-make_draft(__file__)            #uncomment when needed
 fig, ((ax0, ax1), (ax2, ax3)) = plt.subplots(2,2, figsize=classic) #classic or half
+make_draft(__file__)            #uncomment when needed
 
 #plt.subplots_adjust(
 #    left=0.1,

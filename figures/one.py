@@ -15,8 +15,8 @@ plt.rcParams.update(
 #########   Figure config           #########
 #############################################
 
+fig, ax0 = plt.subplots(figsize=classic) #classic or half
 make_draft(__file__)            #uncomment when needed
-fig, ax0 = plt.subplots(figsize=half) #classic or half
 
 #############################################
 #########   Edit the mpl fig here   #########

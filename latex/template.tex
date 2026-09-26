@@ -1,0 +1,47 @@
+\section{Template}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{img/logo/EPFL_logo.png}
+  \end{center}
+  \caption{Caption}
+\label{fig:1}
+\end{wrapfigure}
+
+\begin{equation}
+	\vec{B} = \mu_0 \mu_{r}\vec{H}
+	\label{eqn:1}
+\end{equation}
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/logo/EPFL_logo.png}
+	\caption{Montage de l'expérience \cite{ref2}.}
+	\label{fig:montage}
+\end{figure}
+
+\begin{table}[htbp]
+    \centering
+    \sisetup{
+        separate-uncertainty = true,
+        round-mode = uncertainty,
+        round-precision = 1
+    }
+    \begin{tabular}{
+        S[table-format=1.0]
+        S[table-format=1.1(1)]
+        S[table-format=3.0(1)]
+    }
+        \toprule
+        {Isolants} & {$B_{r}$ [\si{\milli\tesla}]} & {$H_{c}$ [\si{\ampere\per\meter}]} \\
+        \midrule
+        1 & 3.57(23) & 271(38) \\
+        2 & 1.69(28) & 209(41) \\
+        4 & 0.76(21) & 158(54) \\
+        8 & 0.30(20) & 102(79) \\
+        \bottomrule
+    \end{tabular}
+    \caption{Champ rémanent $B_r$ et champ coercitif $H_c$ en fonction du nombre
+    d'isolants}
+    \label{tab:champs_max}
+\end{table}

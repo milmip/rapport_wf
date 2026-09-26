@@ -10,3 +10,4 @@ def figure_name(file):
 def figure_path(file):
     return EXPORT_PATH/figure_name(file)
 
+

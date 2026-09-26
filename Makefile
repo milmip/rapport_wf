@@ -7,7 +7,8 @@ IMG_FILES = $(PY_FILES:$(FIG_DIR)/%.py=$(IMG_DIR)/%.$(EXTENTION))
 PYTHON = python3.11
 IMG_VIEWER = zathura
 
-clean_figures:
+#interface
+figures_clean:
 	rm -f $(IMG_FILES)
 	
 figures: $(IMG_FILES)
@@ -16,34 +17,18 @@ Figure%: $(FIG_DIR)/Figure%.py
 	$(PYTHON) $(FIG_DIR)/Figure$*.py
 	$(IMG_VIEWER) $(IMG_DIR)/Figure$*.$(EXTENTION)
 
-new-fig:
-	@next=$$(ls figures/Figure[0-9][0-9].py 2>/dev/null | grep -oE '[0-9]+' | sort -n | tail -1); \
-	next=$$(echo $${next:-0} | sed 's/^0*//'); \
-	next=$$(printf "%02d" $$((next + 1))); \
-	cp figures/exemple.py "figures/Figure$${next}.py"; \
-	echo "Créé : figures/Figure$${next}.py"
+venv:
+	$(PYTHON) -m venv venv
+	@echo "------> Success ! now run :"
+	@echo "source venv/bin/activate"
 
+venv_installs:
+	pip install numpy matplotlib pandas scipy
+
+venv_clean:
+	rm -rf venv
+
+#Under de hoods
 $(IMG_DIR)/%.$(EXTENTION): $(FIG_DIR)/%.py
 	@echo $@ $<
 	$(PYTHON) $<
-
-clean_all: clean_mpl-template clean_venv
-
-mpl-template: external venv
-	cd external && git clone https://github.com/austinorr/mpl-template.git
-	@echo "------> Success ! now run :"
-	@echo "source venv/bin/activate && make build_mpt-env"
-
-build_mpt-env:
-	cd external/mpl-template && pip install -e .
-
-clean_mpl-template:
-	rm -rf external/mpl-template
-
-venv:
-	$(PYTHON) -m venv venv
-clean_venv:
-	rm -rf venv
-
-external:
-	mkdir external

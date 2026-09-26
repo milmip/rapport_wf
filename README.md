@@ -3,23 +3,19 @@
 ## Workflow
 
 ### Initialize the environement
-Required : `tkinter` (you might have to run `apt install python3-tk`)
+Required : `latin modern` font (you might have to run `apt install fonts-lmodern`)
 
 Run the following :
 ```
 git clone https://github.com/milmip/rapport_wf.git
-cd rapport_wf
+mv rapport_wf tp_title
+cd tp_title
 ```
 then edit `Makefile` config (at the top of the file). Then
 ```
 make venv
-make mpl-template
 source venv/bin/activate
-make build_mpt-env
-mv README.md WORKFLOW.md
-touch README.md
-echo "# J'aimes les baies" > README.md
-pip install pandas
+make venv_installs
 ```
 Then modify the `.git/config` file, renaming the remote url. Create the project on GitHub : it's ready to push.
 
@@ -30,10 +26,9 @@ Don't forget to modify `figures/config.py` as well.
 To create a plot with `matplotlib`, go to the root project directory and : 
 
 1. Ensure you've `source venv/bin/activate`.
-2. Run `make new-fig`.
+2. Copy-paste your desired template.
 3. Edit.
 4. Run `make FigureXX`.
-5. Go step 3 if you're not happy.
 
 Usefull tips : 
 - `make figures` to compile all the Figures.

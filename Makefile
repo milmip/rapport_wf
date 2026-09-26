@@ -4,7 +4,7 @@ IMG_DIR = img
 FIG_DIR = figures
 PY_FILES = $(shell find $(FIG_DIR) -type f -name "Figure*") 
 IMG_FILES = $(PY_FILES:$(FIG_DIR)/%.py=$(IMG_DIR)/%.$(EXTENTION))
-PYTHON = python3.11
+PYTHON = python3
 IMG_VIEWER = zathura
 
 #interface

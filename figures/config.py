@@ -1,7 +1,7 @@
 from pathlib import Path
 
 ### Please adapte this for youreself
-ROOT = Path('~/code/rapport_wf/').expanduser()
+ROOT = Path("..").expanduser()
 ###
 
 ### You normally don't have to touch this

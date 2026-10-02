@@ -16,7 +16,7 @@ plt.rcParams.update(
 #########   Figure config           #########
 #############################################
 
-fig, ((ax0, ax1), (ax2, ax3)) = plt.subplots(2,2, figsize=classic) #classic or half
+fig, ((ax0, ax1), (ax2, ax3)) = plt.subplots(2,2, figsize=classic, constrained_layout=True) #classic or half
 make_draft(__file__)            #uncomment when needed
 
 #plt.subplots_adjust(
@@ -68,6 +68,16 @@ ax3.set(xlim=xlim3, ylim=ylim3)
 #ax1.set_xscale("linear")
 #ax2.set_xscale("linear")
 #ax3.set_xscale("linear")
+#
+## Box ####
+#ax0.spines["top"].set_visible(False)
+#ax0.spines["right"].set_visible(False)
+#ax1.spines["top"].set_visible(False)
+#ax1.spines["top"].set_visible(False)
+#ax2.spines["top"].set_visible(False)
+#ax2.spines["top"].set_visible(False)
+#ax3.spines["right"].set_visible(False)
+#ax3.spines["right"].set_visible(False)
 #
 ## Automatic minor ticks ####
 #ax0.minorticks_on()

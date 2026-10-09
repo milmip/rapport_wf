@@ -1,5 +1,5 @@
 import os.path
-from config import *
+from .config import *
 import matplotlib.pyplot as plt
 
 from scipy import constants

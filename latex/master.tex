@@ -4,7 +4,7 @@
 %\input{latex/preamble.tex}
 
 %Pour les figures à coté du text
-\usepackage{wrapfig}
+\usepackage{paracol}
 
 %Pour que les compteurs dans les paracol et en dehors soient les mêmes
 \globalcounter{figure}
@@ -13,6 +13,7 @@
 
 % pour l'inclusion de figures en eps,pdf,jpg,....
 \usepackage{graphicx}
+\usepackage{subcaption}
 
 %Marges. Désactiver pour utiliser les valeurs LaTeX par défaut
 %\usepackage[top=2.5cm, bottom=2cm, left=2cm, right=2cm, showframe]{geometry}
@@ -41,8 +42,12 @@
 % pour l'inclusion de liens dans le document (pdflatex)
 \usepackage[colorlinks,bookmarks=false,linkcolor=black,urlcolor=blue, citecolor=black]{hyperref}
 
-%Pour l'utilisation plus simple des unités et fractions
-\usepackage{units}
+%Pour les unités et grandeurs physiques (\qty, \si, colonnes S)
+\usepackage{siunitx}
+\sisetup{locale = FR, uncertainty-mode = separate}
+
+%Pour les filets des tableaux (\toprule, \midrule, \bottomrule)
+\usepackage{booktabs}
 
 %Pour utiliser du time new roman... Comenter pour utiliser du ComputerModern
 %\usepackage{mathptmx}
@@ -95,6 +100,7 @@
 \input{latex/demarche.tex}
 \input{latex/resultats.tex}
 \input{latex/discussion.tex}
+\input{latex/conclusion.tex}
 \newpage
 \input{latex/references.tex}
 \input{latex/annexe.tex}

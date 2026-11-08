@@ -7,7 +7,10 @@ from scipy import constants
 
 #format
 classic = 17 / (constants.inch * 100), 17 / 1.62  / (constants.inch * 100)
+squarclassic = 17 / (constants.inch * 100), 17 / 2 / (constants.inch * 100)
+thirdclassic = 17 / (constants.inch * 100), 17 / 3 / (constants.inch * 100)
 half = 17 / 2 / (constants.inch * 100), 17 / 1.62  / (constants.inch * 100)
+third = 17 / 3 / (constants.inch * 100), 17 / 1.62  / (constants.inch * 100)
 
 def script_name(file):
     return os.path.basename(file)
